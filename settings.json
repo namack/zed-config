@@ -7,36 +7,40 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "assistant": {
+  "show_edit_predictions": false,
+  "edit_predictions": {
+    "provider": "zed",
+    "mode": "eager",
+  },
+  "agent": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "model": "claude-3-5-sonnet-latest",
     },
-    "version": "2"
   },
   "theme": "Monokai Vibrant",
   "base_keymap": "Atom",
   "vim_mode": true,
   "ui_font_size": 14,
-  "buffer_font_size": 14,
-  "relative_line_numbers": true,
+  "buffer_font_size": 14.0,
+  "relative_line_numbers": "enabled",
   "tab_size": 2,
   "soft_wrap": "editor_width",
   "format_on_save": "on",
-  "languages": {
-    "TypeScript": {
-      "formatter": {
-        "command": "node_modules/.bin/prettier",
-        "arguments": ["--stdin-filepath", "{buffer_path}"]
-      }
-    },
-    "JavaScript": {
-      "formatter": {
-        "command": "node_modules/.bin/prettier",
-        "arguments": ["--stdin-filepath", "{buffer_path}"]
-      }
-    }
-  },
+  // "languages": {
+  //   "TypeScript": {
+  //     "formatter": {
+  //       "command": "node_modules/.bin/prettier",
+  //       "arguments": ["--stdin-filepath", "{buffer_path}"]
+  //     }
+  //   },
+  //   "JavaScript": {
+  //     "formatter": {
+  //       "command": "node_modules/.bin/prettier",
+  //       "arguments": ["--stdin-filepath", "{buffer_path}"]
+  //     }
+  //   }
+  // },
   // "formatter": {
   //   "external": {
   //     "command": "node_modules/.bin/prettier",
@@ -54,9 +58,9 @@
           "includeInlayVariableTypeHintsWhenTypeMatchesName": false,
           "includeInlayPropertyDeclarationTypeHints": true,
           "includeInlayFunctionLikeReturnTypeHints": true,
-          "includeInlayEnumMemberValueHints": true
-        }
-      }
-    }
-  }
+          "includeInlayEnumMemberValueHints": true,
+        },
+      },
+    },
+  },
 }
